@@ -1,11 +1,11 @@
 -- ~/.config/wezterm/configure/render.lua
 
---local wezterm = require("wezterm")
-return function(config)
-
 --#----------------------------#
 --#  🌸 Rendering (Vulkan) 🌸  #
 --#----------------------------#
+
+--local wezterm = require("wezterm")
+return function(config)
 
 --config.front_end = "WebGpu"
 --  local vulkan_adapter = nil
