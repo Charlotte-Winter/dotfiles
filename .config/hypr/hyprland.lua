@@ -78,7 +78,7 @@ hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("NVD_BACKEND", "direct")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 
-
+hl.env("MOZ_ENABLE_WAYLAND", "1")
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
@@ -385,3 +385,6 @@ hl.window_rule({
   match =  { class = "discord" },
   float = true,
 })
+
+hl.window_rule({
+  match = { class = "^(org.taskbar.blossom)$" }, no_blur = true })

@@ -6,8 +6,8 @@
 
 return function(config)
   config.colors = {
-    foreground = "#ffffff",
-    background = "#000000",
+    foreground = "#000000",
+    background = "#ededed",
 
     cursor_bg = "#84c1d9",--ff79c6
     cursor_border = "#49cca3",--b9f2ca

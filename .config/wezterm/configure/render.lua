@@ -4,10 +4,10 @@
 --#  🌸 Rendering (Vulkan) 🌸  #
 --#----------------------------#
 
---local wezterm = require("wezterm")
+local wezterm = require("wezterm")
 return function(config)
 
---config.front_end = "WebGpu"
+--config.front_end = "OpenGL"
 --  local vulkan_adapter = nil
 --  for _, gpu in ipairs(wezterm.gui.enumerate_gpus()) do
 --    if gpu.backend == 'Vulkan' then
@@ -23,9 +23,13 @@ return function(config)
 --  end
 --  config.webgpu_power_preference = "HighPerformance"
 
--- window options
+--#------------------------#
+--#  🌸 window options 🌸  #
+--#------------------------#
 
   config.enable_wayland = true
   config.max_fps = 120
+
 --config.prefer_egl = false
+  
 end
