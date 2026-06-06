@@ -19,5 +19,4 @@ config.window_content_alignment = {
 }
 config.window_decorations = "NONE"
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 1.0
 end

@@ -6,33 +6,66 @@ end
 vim.g.colors_name = "chawi"
 local hl = vim.api.nvim_set_hl
 
-local bg = "None"
-local bg_dark = "#0f131a"
-local bg_float = "#181f2a"
-local fg = "#e2e9f5"
-local fg_dark = "#7e8e9f"
+local bg, bg_dark, bg_float, fg, fg_dark
+local comment, keyword, function_, string_, number, type_, constant, operator, variable, param
+local selection, cursor, line_num, line_cur
+local error, warning, info, hint
 
-local comment = "#44566c"
-local keyword = "#6cb6eb"
-local function_ = "#56cbd6"
-local string_ = "#89ca9d"
-local number = "#a6b5f7"
-local type_ = "#8baac9"
-local constant = "#b9cde3"
-local operator = "#7da9c7"
-local variable = "#d5e1f2"
-local param = "#b3a3db"
+if vim.o.background == "dark" then
+  bg = "None"
+  bg_dark = "#0f131a"
+  bg_float = "#181f2a"
+  fg = "#e2e9f5"
+  fg_dark = "#475569"
 
-local selection = "#223247"
-local cursor = "#84c1d9"
-local line_num = "#394659"
-local line_cur = "#84c1d9"
+  comment = "#64748b"
+  keyword = "#0284c7"
+  function_ = "#0d9488"
+  string_ = "#16a34a"
+  number = "#6366f1"
+  type_ = "#3b82f6"
+  constant = "#4f46e5"
+  operator = "#0ea5e9"
+  variable = "#0f172a"
+  param = "#7c3aed"
 
-local error = "#e05f5f"
-local warning = "#e0a35f"
-local info = "#5faae0"
-local hint = "#49cca3"
+  selection = "#bae6fd"
+  cursor = "#0369a1"
+  line_num = "#94a3b8"
+  line_cur = "#0ea5e9"
 
+  error = "#dc2626"
+  warning = "#d97706"
+  info = "#2563eb"
+  hint = "#059669"
+else
+  bg = "None"
+  bg_dark = "#f0f4f8"
+  bg_float = "#e5ebf1"
+  fg = "#1e293b"
+  fg_dark = "#7e8e9f"
+
+  comment = "#44566c"
+  keyword = "#6cb6eb"
+  function_ = "#56cbd6"
+  string_ = "#89ca9d"
+  number = "#a6b5f7"
+  type_ = "#8baac9"
+  constant = "#b9cde3"
+  operator = "#7da9c7"
+  variable = "#d5e1f2"
+  param = "#b3a3db"
+
+  selection = "#223247"
+  cursor = "#84c1d9"
+  line_num = "#394659"
+  line_cur = "#84c1d9"
+
+  error = "#e05f5f"
+  warning = "#e0a35f"
+  info = "#5faae0"
+  hint = "#49cca3"
+end
 
 hl(0, "Normal",         { fg = fg, bg = bg })
 hl(0, "NormalFloat",    { fg = fg, bg = bg_float })

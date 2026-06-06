@@ -1,4 +1,4 @@
-vim.cmd("colorscheme chawi_blue")
+vim.cmd("colorscheme chawi_light")
 --vim.opt.guicursor = "a:ver" -- block ver hor
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2

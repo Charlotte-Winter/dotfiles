@@ -3,36 +3,35 @@ if vim.fn.exists("syntax_on") then
   vim.cmd("syntax reset")
 end
 
-vim.g.colors_name = "chawi"
+vim.g.colors_name = "chawi_light"
 local hl = vim.api.nvim_set_hl
 
-local bg = "None"
-local bg_ dark = "#1f181c"
-local bg_float = "#32262d"
-local fg = "#d19fc0"
-local fg_dark = "#b492a0"
+local bg = "None"           -- Transparent (oder alternativ "#f2f4f8" für den reinen Hintergrund)
+local bg_dark = "#e8ecef"   -- Etwas dunkler für die Sidebar (wie links im Bild)
+local bg_float = "#ffffff"  -- Reines Weiß für schwebende Fenster (Floats/Popups)
+local fg = "#4c566a"        -- Dunkles Blaugrau für eine gute Lesbarkeit des normalen Textes
+local fg_dark = "#9caebf"   -- Abgeschwächtes Grau für unwichtigere UI-Elemente
 
-local comment = "None"
-local keyword = "None"
-local function_ = "None"
-local string_ = "None"
-local number = "None"
-local type_ = "None"
-local constant = "None"
-local operator = "None"
-local variable = "None"
-local param = "None"
+local comment = "#9caebf"   -- Helles, unaufdringliches Blaugrau
+local keyword = "#987afb"   -- Lila (für 'local', 'function', 'return' wie im Bild)
+local function_ = "#4aa6f0" -- Helles Blau (für Funktionsaufrufe und Deklarationen)
+local string_ = "#5cb87a"   -- Grün (für Strings wie "property::paddings")
+local number = "#d98a5f"    -- Orange/Braun (für Zahlen wie 0, 1, 25)
+local type_ = "#e38642"     -- Kräftiges Orange (für 'struct', 'void', 'int' im C++ Teil)
+local constant = "#4aa6f0"  -- Blau für Konstanten
+local operator = "#42b3c2"  -- Türkis/Cyan (für '=', '+', '<<')
+local variable = "#4c566a"  -- Standard-Textfarbe für normale Variablen
+local param = "#e05e71"     -- Rot/Pink (für Parameter wie 'checked', 'args' im Bild)
 
-local selection = "None"
-local cursor = "None"
-local line_num = "None"
-local line_cur = "None"
+local selection = "#d4dee8" -- Leichtes Blaugrau für markierten Text
+local cursor = "#4aa6f0"    -- Passend zum Blau der Funktionen
+local line_num = "#c3cddb"  -- Dezentes Grau für inaktive Zeilennummern
+local line_cur = "#4aa6f0"  -- Blau für die aktive Zeilennummer
 
-local error = "None"
-local warning = "Noen"
-local info = "None"
-local hinto = "None"
-
+local error = "#e05f5f"     -- Klassisches Rot für Fehler
+local warning = "#d9a05b"   -- Orange für Warnungen
+local info = "#4aa6f0"      -- Blau für Infos
+local hint = "#42b3c2"      -- Türkis für Hints
 
 hl(0, "Normal",         { fg = fg, bg = bg })
 hl(0, "NormalFloat",    { fg = fg, bg = bg_float })
@@ -238,6 +237,3 @@ hl(0, "EndOfBuffer",              { fg = bg })
 hl(0, "Substitute",               { fg = bg, bg = yellow })
 hl(0, "QuickFixLine",             { bg = selection, bold = true })
 hl(0, "MsgSeparator",             { fg = comment, bg = bg_dark })
-
-
-

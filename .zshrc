@@ -55,7 +55,7 @@ configure_prompt() {
         PROMPT=$'${HEX_PINK}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B${HEX_ROSA}%n'$prompt_symbol$'%m%b${HEX_PINK})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b${HEX_PINK}]\n└─%B%(#.${HEX_ERROR}#.${HEX_PEACH}$)%b${HEX_RESET} '
             ;;
         cute)
-            PROMPT=$'%F{cyan}█%F{reset} %n$prompt_symbol%m %~ %F{cyan}█%k\n%F{reset}   insert>> '
+            PROMPT="%F{#44D1FC}█%F{reset} %n%f$prompt_symbol%m %~ %F{#FA6EF2}█%k"$'\n'"%F{reset}   insert>> "
 #            RPROMPT="%D{%H:%M}"
             ;;
     esac
