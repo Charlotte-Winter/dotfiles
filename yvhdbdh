@@ -1,1 +1,1 @@
-$(urlfetch https://api.crunchprank.net/twitch/followers/$(channel)?count=10&direction=asc)
+$(urlfetch https://decapi.me/twitch/followers/$(channel)?count=10&direction=asc)
