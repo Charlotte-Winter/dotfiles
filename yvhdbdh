@@ -1,1 +1,1 @@
-$(urlfetch https://2g.be/twitch/followers.php?channel=$(channel)&limit=10)
+$(urlfetch https://api.crunchprank.net/twitch/followers/$(channel)?count=10&direction=asc)
