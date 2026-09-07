@@ -1,0 +1,1 @@
+$(urlfetch https://2g.be/twitch/followers.php?channel=$(channel)&limit=10)
